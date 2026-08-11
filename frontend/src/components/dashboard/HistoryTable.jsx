@@ -96,9 +96,9 @@
         return (
         <div className="glass p-6">
             <div className="animate-pulse space-y-4">
-            <div className="h-8 bg-white/5 rounded w-1/4" />
-            <div className="h-12 bg-white/5 rounded" />
-            <div className="h-64 bg-white/5 rounded" />
+            <div className="h-8 bg-slate-800/60 rounded w-1/4" />
+            <div className="h-12 bg-slate-800/60 rounded" />
+            <div className="h-64 bg-slate-800/60 rounded" />
             </div>
         </div>
         );
@@ -124,7 +124,7 @@
         </div>
 
         {/* Filters */}
-        <div className="grid gap-4 mb-6 p-4 bg-white/5 rounded-lg md:grid-cols-[1fr_1fr]">
+        <div className="grid gap-4 mb-6 p-4 bg-slate-800/60 rounded-lg md:grid-cols-[1fr_1fr]">
             <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2 text-gray-400">
                 <FaSearch />
@@ -199,7 +199,7 @@
                     key={record._id}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="border-b border-white/5 hover:bg-white/5 transition-colors"
+                    className="border-b border-white/5 hover:bg-slate-800/40 transition-colors"
                     >
                     <td className="py-2 px-3 font-mono">{record.cycleNumber}</td>
                     <td className="py-2 px-3 text-red-400">{record.redDuration}</td>
@@ -245,14 +245,14 @@
                 <button
                 onClick={() => setPagination({ ...pagination, page: pagination.page - 1 })}
                 disabled={pagination.page === 1}
-                className="px-4 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 bg-slate-800/40 hover:bg-slate-800/50 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                 Previous
                 </button>
                 <button
                 onClick={() => setPagination({ ...pagination, page: pagination.page + 1 })}
                 disabled={pagination.page === pagination.pages}
-                className="px-4 py-2 bg-white/5 hover:bg-white/10 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-4 py-2 bg-slate-800/40 hover:bg-slate-800/50 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                 Next
                 </button>
