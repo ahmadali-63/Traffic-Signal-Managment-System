@@ -3,6 +3,7 @@
     import api from '../../services/api';
     import toast from 'react-hot-toast';
     import { FaSearch, FaTrash, FaFileExport, FaCalendar } from 'react-icons/fa';
+    import ModeSelect from './ModeSelect';
 
     const HistoryTable = () => {
     const [history, setHistory] = useState([]);
@@ -129,15 +130,17 @@
                 <FaSearch />
                 <span className="text-sm">Mode</span>
             </div>
-            <select
-                value={filters.mode}
-                onChange={(e) => setFilters({ ...filters, mode: e.target.value })}
-                className="mode-select"
-            >
-                <option value="">All Modes</option>
-                <option value="auto">Auto</option>
-                <option value="manual">Manual</option>
-            </select>
+            <div>
+                <ModeSelect
+                    value={filters.mode}
+                    onChange={(val) => setFilters({ ...filters, mode: val })}
+                    options={[
+                        { value: '', label: 'All Modes' },
+                        { value: 'auto', label: 'Auto' },
+                        { value: 'manual', label: 'Manual' },
+                    ]}
+                />
+            </div>
             </div>
 
             <div className="flex flex-col gap-3">
