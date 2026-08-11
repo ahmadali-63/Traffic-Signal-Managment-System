@@ -79,10 +79,10 @@
 
             {/* Mode and Status */}
             <div className="flex justify-center gap-4 mt-4 text-sm">
-                <span className="px-3 py-1 bg-white/5 rounded-full">
+                <span className="px-3 py-1 bg-slate-800/50 rounded-full">
                 Mode: <span className="font-semibold">{(signalState?.mode || '').toUpperCase()}</span>
                 </span>
-                <span className="px-3 py-1 bg-white/5 rounded-full">
+                <span className="px-3 py-1 bg-slate-800/50 rounded-full">
                 Status: <span className={`font-semibold ${
                     signalState?.status === 'running' ? 'text-green-400' :
                     signalState?.status === 'paused' ? 'text-yellow-400' :
@@ -91,7 +91,7 @@
                     {(signalState?.status || '').toUpperCase()}
                 </span>
                 </span>
-                <span className="px-3 py-1 bg-white/5 rounded-full">
+                <span className="px-3 py-1 bg-slate-800/50 rounded-full">
                 Cycles: <span className="font-semibold">{signalState?.totalCycles || 0}</span>
                 </span>
             </div>

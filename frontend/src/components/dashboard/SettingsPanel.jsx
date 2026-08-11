@@ -57,10 +57,10 @@
         return (
         <div className="glass p-6">
             <div className="animate-pulse space-y-4">
-            <div className="h-8 bg-white/5 rounded w-1/3" />
-            <div className="h-12 bg-white/5 rounded" />
-            <div className="h-12 bg-white/5 rounded" />
-            <div className="h-12 bg-white/5 rounded" />
+            <div className="h-8 bg-slate-800/60 rounded w-1/3" />
+            <div className="h-12 bg-slate-800/60 rounded" />
+            <div className="h-12 bg-slate-800/60 rounded" />
+            <div className="h-12 bg-slate-800/60 rounded" />
             </div>
         </div>
         );
@@ -89,7 +89,7 @@
                 max="60"
                 value={settings.redDuration}
                 onChange={(e) => setSettings({ ...settings, redDuration: parseInt(e.target.value) })}
-                className="flex-1 h-2 bg-white/10 rounded-lg appearance-none cursor-pointer"
+                className="flex-1 h-2 bg-slate-700/30 rounded-lg appearance-none cursor-pointer"
                 />
                 <span className="text-2xl font-bold text-red-400 w-12 text-center">
                 {settings.redDuration}s
@@ -108,7 +108,7 @@
                 max="10"
                 value={settings.yellowDuration}
                 onChange={(e) => setSettings({ ...settings, yellowDuration: parseInt(e.target.value) })}
-                className="flex-1 h-2 bg-white/10 rounded-lg appearance-none cursor-pointer"
+                className="flex-1 h-2 bg-slate-700/30 rounded-lg appearance-none cursor-pointer"
                 />
                 <span className="text-2xl font-bold text-yellow-400 w-12 text-center">
                 {settings.yellowDuration}s
@@ -127,7 +127,7 @@
                 max="120"
                 value={settings.greenDuration}
                 onChange={(e) => setSettings({ ...settings, greenDuration: parseInt(e.target.value) })}
-                className="flex-1 h-2 bg-white/10 rounded-lg appearance-none cursor-pointer"
+                className="flex-1 h-2 bg-slate-700/30 rounded-lg appearance-none cursor-pointer"
                 />
                 <span className="text-2xl font-bold text-green-400 w-12 text-center">
                 {settings.greenDuration}s
@@ -153,7 +153,7 @@
             <button
                 type="button"
                 onClick={handleReset}
-                className="px-6 py-3 bg-white/5 hover:bg-white/10 rounded-lg text-gray-400 transition-colors flex items-center gap-2"
+                className="px-6 py-3 bg-slate-800/40 hover:bg-slate-800/50 rounded-lg text-gray-400 transition-colors flex items-center gap-2"
             >
                 <FaUndo />
                 Reset

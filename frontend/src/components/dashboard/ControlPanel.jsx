@@ -83,7 +83,7 @@
             <button
             onClick={() => switchMode('auto')}
             className={`flex items-center justify-center gap-2 p-3 rounded-lg transition-colors ${
-                isAuto ? 'bg-green-500/30 text-green-400' : 'bg-white/5 text-gray-400 hover:bg-white/10'
+                isAuto ? 'bg-green-500/30 text-green-400' : 'bg-slate-800/40 text-gray-400 hover:bg-slate-800/50'
             }`}
             >
             <FaRobot />
@@ -94,7 +94,7 @@
             <button
             onClick={() => switchMode('manual')}
             className={`flex items-center justify-center gap-2 p-3 rounded-lg transition-colors ${
-                !isAuto ? 'bg-green-500/30 text-green-400' : 'bg-white/5 text-gray-400 hover:bg-white/10'
+                !isAuto ? 'bg-green-500/30 text-green-400' : 'bg-slate-800/40 text-gray-400 hover:bg-slate-800/50'
             }`}
             >
             <FaUser />

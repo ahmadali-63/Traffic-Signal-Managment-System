@@ -60,7 +60,7 @@ import React, { useState } from 'react';
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
+                    className="w-full pl-10 pr-4 py-3 input-alt border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
                     placeholder="admin@example.com"
                     />
                 </div>
@@ -77,7 +77,7 @@ import React, { useState } from 'react';
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    className="w-full pl-10 pr-10 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
+                    className="w-full pl-10 pr-10 py-3 input-alt border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none transition-colors"
                     placeholder="••••••••"
                     />
                     <button

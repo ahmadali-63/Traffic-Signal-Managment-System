@@ -37,7 +37,7 @@
             <TrafficSignal />
         </div>
 
-        <div className="mt-4 p-3 bg-white/5 rounded-lg text-sm">
+        <div className="mt-4 p-3 bg-slate-800/60 rounded-lg text-sm">
             <div className="flex items-center justify-between">
             <span className="text-gray-400">Total Cycles:</span>
             <span className="font-semibold">{signalState?.totalCycles ?? 0}</span>
