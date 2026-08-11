@@ -132,7 +132,7 @@
             <select
                 value={filters.mode}
                 onChange={(e) => setFilters({ ...filters, mode: e.target.value })}
-                className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-blue-500"
+                className="mode-select"
             >
                 <option value="">All Modes</option>
                 <option value="auto">Auto</option>
@@ -152,7 +152,7 @@
                     type="date"
                     value={filters.startDate}
                     onChange={(e) => setFilters({ ...filters, startDate: e.target.value })}
-                    className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-blue-500"
+                    className="input-alt"
                 />
                 </div>
                 <div className="flex flex-col gap-1">
@@ -161,7 +161,7 @@
                     type="date"
                     value={filters.endDate}
                     onChange={(e) => setFilters({ ...filters, endDate: e.target.value })}
-                    className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-blue-500"
+                    className="input-alt"
                 />
                 </div>
             </div>

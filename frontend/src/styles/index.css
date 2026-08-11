@@ -37,6 +37,38 @@
         @apply bg-signal-green animate-glow-green;
     }
     }
+    /* Styled select for mode filter */
+    .mode-select {
+        @apply text-white border border-white/10 rounded-lg px-3 py-2 focus:outline-none;
+        appearance: none;
+        background: linear-gradient(90deg, rgba(79,70,229,0.95), rgba(139,92,246,0.95));
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    .mode-select:focus {
+        @apply ring-2 ring-indigo-500;
+    }
+
+    /* Make option items match the select background and remain readable */
+    .mode-select option {
+        background: linear-gradient(180deg, rgba(79,70,229,0.95), rgba(139,92,246,0.95));
+        color: #ffffff;
+    }
+
+    /* Hide default arrow on some browsers so custom styling is clean */
+    .mode-select::-ms-expand {
+        display: none;
+    }
+
+    /* Alternate input style to replace faint white backgrounds */
+    .input-alt {
+        @apply text-white border border-white/10 rounded-lg px-3 py-2 focus:outline-none;
+        @apply bg-slate-800/40;
+    }
+
+    .input-alt:focus {
+        @apply ring-2 ring-indigo-500;
+    }
 
     /* Custom scrollbar */
     ::-webkit-scrollbar {
