@@ -123,9 +123,12 @@
         </div>
 
         {/* Filters */}
-        <div className="flex flex-wrap items-center gap-4 mb-6 p-4 bg-white/5 rounded-lg">
-            <div className="flex items-center gap-2">
-            <FaSearch className="text-gray-400" />
+        <div className="grid gap-4 mb-6 p-4 bg-white/5 rounded-lg md:grid-cols-[1fr_1fr]">
+            <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2 text-gray-400">
+                <FaSearch />
+                <span className="text-sm">Mode</span>
+            </div>
             <select
                 value={filters.mode}
                 onChange={(e) => setFilters({ ...filters, mode: e.target.value })}
@@ -137,21 +140,31 @@
             </select>
             </div>
 
-            <div className="flex items-center gap-2">
-            <FaCalendar className="text-gray-400" />
-            <input
-                type="date"
-                value={filters.startDate}
-                onChange={(e) => setFilters({ ...filters, startDate: e.target.value })}
-                className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-blue-500"
-            />
-            <span className="text-gray-400">to</span>
-            <input
-                type="date"
-                value={filters.endDate}
-                onChange={(e) => setFilters({ ...filters, endDate: e.target.value })}
-                className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-blue-500"
-            />
+            <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-2 text-gray-400">
+                <FaCalendar />
+                <span className="text-sm">Date Range</span>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+                <div className="flex flex-col gap-1">
+                <label className="text-xs text-gray-400">From</label>
+                <input
+                    type="date"
+                    value={filters.startDate}
+                    onChange={(e) => setFilters({ ...filters, startDate: e.target.value })}
+                    className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-blue-500"
+                />
+                </div>
+                <div className="flex flex-col gap-1">
+                <label className="text-xs text-gray-400">To</label>
+                <input
+                    type="date"
+                    value={filters.endDate}
+                    onChange={(e) => setFilters({ ...filters, endDate: e.target.value })}
+                    className="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-blue-500"
+                />
+                </div>
+            </div>
             </div>
         </div>
 
@@ -160,14 +173,14 @@
             <table className="w-full">
             <thead>
                 <tr className="border-b border-white/10">
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Cycle #</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Red (s)</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Yellow (s)</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Green (s)</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Total (s)</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Mode</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Completed</th>
-                <th className="text-left py-3 px-4 text-sm font-medium text-gray-400">Actions</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-400">Cycle #</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-400">Red (s)</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-400">Yellow (s)</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-400">Green (s)</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-400">Total (s)</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-400">Mode</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-400">Completed</th>
+                <th className="text-left py-2 px-3 text-sm font-medium text-gray-400">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -185,12 +198,12 @@
                     animate={{ opacity: 1 }}
                     className="border-b border-white/5 hover:bg-white/5 transition-colors"
                     >
-                    <td className="py-3 px-4 font-mono">{record.cycleNumber}</td>
-                    <td className="py-3 px-4 text-red-400">{record.redDuration}</td>
-                    <td className="py-3 px-4 text-yellow-400">{record.yellowDuration}</td>
-                    <td className="py-3 px-4 text-green-400">{record.greenDuration}</td>
-                    <td className="py-3 px-4">{record.totalCycleDuration}</td>
-                    <td className="py-3 px-4">
+                    <td className="py-2 px-3 font-mono">{record.cycleNumber}</td>
+                    <td className="py-2 px-3 text-red-400">{record.redDuration}</td>
+                    <td className="py-2 px-3 text-yellow-400">{record.yellowDuration}</td>
+                    <td className="py-2 px-3 text-green-400">{record.greenDuration}</td>
+                    <td className="py-2 px-3">{record.totalCycleDuration}</td>
+                    <td className="py-2 px-3">
                         <span className={`px-2 py-1 rounded text-xs ${
                         record.mode === 'auto' 
                             ? 'bg-blue-500/20 text-blue-400' 
@@ -199,10 +212,10 @@
                         {record.mode.toUpperCase()}
                         </span>
                     </td>
-                    <td className="py-3 px-4 text-sm text-gray-400">
+                    <td className="py-2 px-3 text-sm text-gray-400">
                         {formatDate(record.completedAt)}
                     </td>
-                    <td className="py-3 px-4">
+                    <td className="py-2 px-3">
                         <button
                         onClick={() => handleDelete(record._id)}
                         className="p-2 hover:bg-red-500/20 rounded-lg text-red-400 transition-colors"
