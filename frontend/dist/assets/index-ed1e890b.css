@@ -852,11 +852,11 @@ video {
 }
 
 .bg-white\/5 {
-    background-color: #ffffff0d;
+    background-color: rgb(177 68 59 / 46%);
 }
 
 .bg-white\/10 {
-    background-color: #ffffff1a;
+    background-color: rgb(255 255 255 / 10%);
 }
 
 .bg-blue-500\/20 {
